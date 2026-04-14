@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt · Orthopädie-Schuhtechnik Adelmann</title>
+  <meta name="description" content="Adresse, Öffnungszeiten und Kontaktformular. Krämerstraße 15, 41460 Neuss." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,30..100,0..1;1,9..144,300..600,30..100,0..1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="OA Adelmann Startseite"><img src="OA_OKay.svg" alt="OA Adelmann" class="brand-logo"/></a>
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="schuhtechnik.html">Schuhtechnik</a>
+        <a href="sportlerberatung.html">Sportlerberatung</a>
+        <a href="kontakt.html" class="btn btn-dark is-active">Kontakt <span class="arrow">→</span></a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menü öffnen"><span></span></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <div class="hero-card reveal">
+      <div>
+        <div class="hero-eyebrow"><span>Kontakt</span></div>
+        <h1>Wir freuen uns, <em>von Ihnen zu hören</em></h1>
+        <p class="lead">Rufen Sie an, schreiben Sie uns oder kommen Sie in der Krämerstraße 15 vorbei. Wir nehmen uns Zeit für Ihr Anliegen.</p>
+        <div class="hero-actions">
+          <a href="tel:+492131272627" class="btn btn-primary">02131 272627 <span class="arrow">→</span></a>
+          <a href="mailto:kontakt@oadelmann.de" class="btn btn-ghost">kontakt@oadelmann.de</a>
+        </div>
+      </div>
+      <div class="hero-visual has-image">
+        <img src="images/Geschaeft.jpg" alt="Ladengeschäft Adelmann, Krämerstr. 15, Neuss" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact grid -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <aside class="contact-info reveal">
+          <div class="contact-block">
+            <h4>Adresse</h4>
+            <p>Orthopädie-Schuhtechnik Adelmann<br/>
+               Krämerstr. 15<br/>
+               41460 Neuss</p>
+          </div>
+          <div class="contact-block">
+            <h4>Direkter Kontakt</h4>
+            <p>Tel. 02131 272627<br/>
+               Fax 02131 272628<br/>
+               <a href="mailto:kontakt@oadelmann.de">kontakt@oadelmann.de</a></p>
+          </div>
+          <div class="contact-block">
+            <h4>Öffnungszeiten</h4>
+            <table class="hours-table">
+              <tr><td>Montag</td><td>8:00–18:00</td></tr>
+              <tr><td>Dienstag</td><td>8:00–18:00</td></tr>
+              <tr><td>Mittwoch</td><td>geschlossen</td></tr>
+              <tr><td>Donnerstag</td><td>8:00–18:00</td></tr>
+              <tr><td>Freitag</td><td>8:00–18:00</td></tr>
+              <tr><td>Samstag</td><td>9:00–12:30</td></tr>
+              <tr><td>Sonntag</td><td>geschlossen</td></tr>
+            </table>
+          </div>
+        </aside>
+
+        <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Vielen Dank, wir melden uns in Kürze.'); this.reset();">
+          <div class="form-row">
+            <label>Name
+              <input type="text" name="name" required placeholder="Ihr Name" />
+            </label>
+            <label>E-Mail
+              <input type="email" name="email" required placeholder="ihre@email.de" />
+            </label>
+          </div>
+          <label>Telefon (optional)
+            <input type="tel" name="phone" placeholder="z. B. 02131 123456" />
+          </label>
+          <label>Anliegen
+            <select name="topic">
+              <option>Allgemeine Anfrage</option>
+              <option>Einlagen</option>
+              <option>Maßschuhe</option>
+              <option>Schuhzurichtungen</option>
+              <option>3D-Analyse</option>
+              <option>Sportlerberatung</option>
+            </select>
+          </label>
+          <label>Nachricht
+            <textarea name="message" rows="5" placeholder="Schildern Sie Ihr Anliegen…"></textarea>
+          </label>
+          <button type="submit" class="btn btn-dark" style="justify-self: start;">Nachricht senden <span class="arrow">→</span></button>
+          <p style="font-size: 0.8rem; color: var(--ink-500); margin: 0;">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Standort -->
+  <section class="section" id="standort" style="padding-top: 0;">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Standort</span>
+        <h2>Mitten im Herzen <em>von Neuss</em></h2>
+        <p>Neben dem Kardinal-Frings-Denkmal an der St. Quirinus-Basilika. Krämerstr. 15, 41460 Neuss.</p>
+      </div>
+      <div class="location-grid reveal">
+        <div class="location-photo"><img src="images/Geschaeft.jpg" alt="Ladengeschäft Adelmann, Krämerstr. 15, Neuss" loading="lazy" /></div>
+        <div class="location-map">
+          <iframe
+            title="Google Maps: Krämerstr. 15, 41460 Neuss"
+            src="https://www.google.com/maps?q=Kr%C3%A4merstra%C3%9Fe+15,+41460+Neuss&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="location-actions reveal">
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Kr%C3%A4merstra%C3%9Fe+15%2C+41460+Neuss" target="_blank" rel="noopener">Route in Google Maps <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand" aria-label="OA Adelmann"><img src="OA_OKay.svg" alt="OA Adelmann" class="brand-logo"/></a>
+          <p>Orthopädie-Schuhtechnik aus Leidenschaft. In sechster Generation im Herzen von Neuss.</p>
+        </div>
+        <div><h5>Seiten</h5><ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="schuhtechnik.html">Schuhtechnik</a></li>
+          <li><a href="sportlerberatung.html">Sportlerberatung</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul></div>
+        <div><h5>Kontakt</h5><ul>
+          <li>Krämerstr. 15<br/>41460 Neuss</li>
+          <li>Tel. 02131 272627</li>
+          <li>Fax 02131 272628</li>
+          <li><a href="mailto:kontakt@oadelmann.de">kontakt@oadelmann.de</a></li>
+        </ul></div>
+        <div><h5>Öffnungszeiten</h5><ul>
+          <li>Mo, Di, Do, Fr: 8:00–18:00</li>
+          <li>Mi: geschlossen</li>
+          <li>Sa: 9:00–12:30</li>
+          <li>So: geschlossen</li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="year">2026</span> Orthopädie-Schuhtechnik Adelmann</div>
+        <div><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>

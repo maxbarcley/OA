@@ -1,0 +1,21 @@
+# Build / verify helpers
+_verify.py
+_icons.py
+_logo.py
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Screenshots / scratch
+/screenshots/
+*.log
