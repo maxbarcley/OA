@@ -75,17 +75,27 @@
           </div>
         </aside>
 
-        <form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Vielen Dank, wir melden uns in Kürze.'); this.reset();">
+        <form class="contact-form reveal"
+              action="https://api.web3forms.com/submit"
+              method="POST">
+          <!-- Web3Forms: OA_Kontakt -->
+          <input type="hidden" name="access_key" value="1eabd11c-54fc-4ccc-9887-4c0c6a9a7c59">
+          <input type="hidden" name="subject" value="Neue Kontaktanfrage über oadelmann.de">
+          <input type="hidden" name="from_name" value="Website · Kontaktformular">
+          <input type="hidden" name="redirect" value="https://maxbarcley.github.io/OA/danke.html">
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+
           <div class="form-row">
             <label>Name
-              <input type="text" name="name" required placeholder="Ihr Name" />
+              <input type="text" name="name" required autocomplete="name" placeholder="Ihr Name" />
             </label>
             <label>E-Mail
-              <input type="email" name="email" required placeholder="ihre@email.de" />
+              <input type="email" name="email" required autocomplete="email" placeholder="ihre@email.de" />
             </label>
           </div>
           <label>Telefon (optional)
-            <input type="tel" name="phone" placeholder="z. B. 02131 123456" />
+            <input type="tel" name="phone" autocomplete="tel" placeholder="z. B. 02131 123456" />
           </label>
           <label>Anliegen
             <select name="topic">
@@ -101,7 +111,7 @@
             <textarea name="message" rows="5" placeholder="Schildern Sie Ihr Anliegen…"></textarea>
           </label>
           <button type="submit" class="btn btn-dark" style="justify-self: start;">Nachricht senden <span class="arrow">→</span></button>
-          <p style="font-size: 0.8rem; color: var(--ink-500); margin: 0;">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.</p>
+          <p style="font-size: 0.8rem; color: var(--ink-500); margin: 0;">Mit dem Absenden stimmen Sie unserer <a href="datenschutz.html" style="color: var(--green-800);">Datenschutzerklärung</a> zu.</p>
         </form>
       </div>
     </div>
