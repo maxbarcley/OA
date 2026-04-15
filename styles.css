@@ -190,7 +190,8 @@ p  { margin: 0 0 1em; }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: 12px 0 48px;
+  padding-top: 12px;
+  padding-bottom: 48px;
 }
 .hero-card {
   background: var(--green-800);
