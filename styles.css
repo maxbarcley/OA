@@ -880,18 +880,30 @@ p  { margin: 0 0 1em; }
   box-shadow: var(--shadow-card);
   aspect-ratio: 16 / 6;
   background: var(--cream-100);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .success-banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 28%;
   display: block;
 }
 
 @media (max-width: 900px) {
   .success-card { padding: 56px 28px 48px; }
   .success-next { grid-template-columns: 1fr; }
-  .success-banner { aspect-ratio: 16 / 9; }
+  .success-banner {
+    aspect-ratio: 4 / 5;
+    max-width: 420px;
+  }
+  .success-banner img { object-position: center 22%; }
+}
+
+@media (max-width: 560px) {
+  .success-banner { aspect-ratio: 3 / 4; max-width: 360px; }
 }
 
 /* ---------- Termin form (Maßschuh) ---------- */
