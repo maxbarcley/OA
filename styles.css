@@ -432,6 +432,18 @@ p  { margin: 0 0 1em; }
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+.section-figure {
+  margin: 0 0 32px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.section-figure img {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 42vw, 460px);
+  object-fit: cover;
+}
 .service-card {
   background: var(--white);
   border-radius: var(--r-lg);
