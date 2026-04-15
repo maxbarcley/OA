@@ -718,6 +718,91 @@ p  { margin: 0 0 1em; }
 .contact-form textarea { resize: vertical; min-height: 120px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 
+/* ---------- Termin form (Maßschuh) ---------- */
+.split-head-actions { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 12px; }
+
+.termin-form { max-width: 780px; margin: 0 auto; gap: 22px; }
+.termin-form .form-group-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--green-800);
+  margin: 8px 0 -4px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  letter-spacing: 0.01em;
+}
+.termin-form .form-group-title:first-child { margin-top: 0; }
+
+.termin-form .form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.termin-form .form-fieldset legend {
+  font-size: 0.9rem;
+  color: var(--ink-700);
+  padding: 0;
+  margin-bottom: 2px;
+}
+.termin-form .radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.termin-form .radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--cream-50);
+  font-size: 0.9rem;
+  color: var(--ink-800);
+  cursor: pointer;
+  transition: border-color .2s, background .2s, color .2s;
+  margin: 0;
+}
+.termin-form .radio:hover { border-color: var(--green-500); }
+.termin-form .radio input[type="radio"],
+.termin-form .radio input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+  accent-color: var(--green-800);
+}
+.termin-form .radio input[type="radio"] { border-radius: 50%; }
+.termin-form .radio:has(input:checked) {
+  border-color: var(--green-800);
+  background: var(--white);
+  color: var(--green-900);
+}
+
+.termin-form .form-submit-row {
+  display: grid;
+  gap: 10px;
+  margin-top: 6px;
+}
+.termin-form .form-submit-row .btn { justify-self: start; }
+.termin-form .form-legal {
+  font-size: 0.8rem;
+  color: var(--ink-500);
+  margin: 0;
+  line-height: 1.55;
+}
+.termin-form .form-legal a {
+  color: var(--green-800);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* ---------- Reviews ---------- */
 .reviews-grid {
   display: grid;

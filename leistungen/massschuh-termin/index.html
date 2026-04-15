@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#037456" />
+  <title>Maßschuh-Termin anfragen · Orthopädie-Schuhtechnik Adelmann</title>
+  <meta name="description" content="Persönliche Terminanfrage für Maßschuh-Beratung und Anfertigung. Wir melden uns innerhalb eines Werktags." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,30..100,0..1;1,9..144,300..600,30..100,0..1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container">
+      <a href="../../index.html" class="brand" aria-label="OA Adelmann Startseite"><img src="../../OA_OKay.svg" alt="OA Adelmann" class="brand-logo"/></a>
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="../../index.html">Start</a>
+        <a href="../../ueber-uns.html">Über uns</a>
+        <a href="../">Unsere Leistungen</a>
+        <a href="../../kontakt.html" class="btn btn-dark">Kontakt <span class="arrow">→</span></a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menü öffnen"><span></span></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <div class="hero-card reveal">
+      <div>
+        <div class="hero-eyebrow"><span>Maßschuhe · Terminanfrage</span></div>
+        <h1>Ihr Weg zum <em>eigenen Maßschuh</em></h1>
+        <p class="lead">Ein Maßschuh entsteht im persönlichen Gespräch. Schildern Sie uns kurz Ihr Anliegen und Ihren Wunschzeitraum — wir melden uns innerhalb eines Werktags mit zwei bis drei konkreten Terminvorschlägen.</p>
+        <div class="hero-actions">
+          <a href="tel:+492131272627" class="btn btn-primary">Lieber anrufen: 02131 272627 <span class="arrow">→</span></a>
+          <a href="#anfrage" class="btn btn-ghost">Zur Anfrage</a>
+        </div>
+      </div>
+      <div class="hero-visual has-image">
+        <img src="../../images/DSCF1147.jpg" alt="Maßschuh-Arbeit in der Werkstatt Adelmann" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <!-- What to expect -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">So läuft es ab</span>
+        <h2>Drei Schritte bis zum fertigen Maßschuh</h2>
+        <p>Wir planen bewusst Zeit ein, damit Sie in Ruhe alle Fragen stellen können. Der erste Termin dauert typischerweise 60 bis 90 Minuten.</p>
+      </div>
+      <div class="process-list">
+        <div class="process-item reveal">
+          <div class="num">01</div>
+          <div><h3>Erstgespräch &amp; Analyse</h3><p>Anamnese, Fußabdruck, 3D-Scan und Besprechung Ihrer Vorstellungen. Kassen- oder Rezeptfragen klären wir direkt im Termin.</p></div>
+          <span></span>
+        </div>
+        <div class="process-item reveal">
+          <div class="num">02</div>
+          <div><h3>Leistenbau &amp; Anprobe</h3><p>Wir fertigen Ihren individuellen Leisten und vereinbaren eine Probeanprobe, um Passform und Sitz fein abzustimmen.</p></div>
+          <span></span>
+        </div>
+        <div class="process-item reveal">
+          <div class="num">03</div>
+          <div><h3>Fertigung &amp; Übergabe</h3><p>Der fertige Maßschuh wird übergeben, eingelaufen und bei Bedarf nachjustiert — wir begleiten Sie auch danach.</p></div>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="section" id="anfrage">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Terminanfrage</span>
+        <h2>Ihre Anfrage</h2>
+        <p>Alle mit <span aria-hidden="true">*</span> markierten Felder sind Pflichtfelder. Wir behandeln Ihre Angaben vertraulich und nutzen sie ausschließlich zur Terminabstimmung.</p>
+      </div>
+
+      <form class="contact-form termin-form reveal"
+            action="https://api.web3forms.com/submit"
+            method="POST">
+        <!-- Web3Forms: Access Key bitte eintragen, sobald vorhanden -->
+        <input type="hidden" name="access_key" value="PLACEHOLDER_WEB3FORMS_KEY">
+        <input type="hidden" name="subject" value="Neue Maßschuh-Terminanfrage über oadelmann.de">
+        <input type="hidden" name="from_name" value="Website · Maßschuh-Terminanfrage">
+        <input type="hidden" name="redirect" value="https://maxbarcley.github.io/OA/leistungen/massschuh-termin/danke.html">
+        <!-- Honeypot: Bots füllen dieses unsichtbare Feld aus, echte Menschen nicht -->
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+
+        <h3 class="form-group-title">1 · Kontaktdaten</h3>
+        <div class="form-row">
+          <label>Name <span aria-hidden="true">*</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="Vor- und Nachname" />
+          </label>
+          <label>E-Mail <span aria-hidden="true">*</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="ihre@email.de" />
+          </label>
+        </div>
+        <label>Telefon
+          <input type="tel" name="phone" autocomplete="tel" placeholder="z. B. 02131 123456 · erleichtert die Rückmeldung" />
+        </label>
+
+        <h3 class="form-group-title">2 · Zur Versorgung</h3>
+        <label>Art der Versorgung <span aria-hidden="true">*</span>
+          <select name="versorgung" required>
+            <option value="" disabled selected>Bitte wählen …</option>
+            <option>Erstberatung Maßschuh</option>
+            <option>Änderung bestehender Maßschuhe</option>
+            <option>Nachversorgung / Wiederanfertigung</option>
+            <option>Sonderanfertigung Beruf oder Sport</option>
+            <option>Sonstiges</option>
+          </select>
+        </label>
+
+        <fieldset class="form-fieldset">
+          <legend>Auf Rezept?</legend>
+          <div class="radio-row">
+            <label class="radio"><input type="radio" name="rezept" value="Ja"> Ja</label>
+            <label class="radio"><input type="radio" name="rezept" value="Nein"> Nein</label>
+            <label class="radio"><input type="radio" name="rezept" value="Weiß nicht" checked> Weiß nicht / klären wir im Termin</label>
+          </div>
+        </fieldset>
+
+        <h3 class="form-group-title">3 · Terminpräferenz</h3>
+
+        <fieldset class="form-fieldset">
+          <legend>Bevorzugte Tageszeit</legend>
+          <div class="radio-row">
+            <label class="radio"><input type="checkbox" name="tageszeit" value="Vormittag"> Vormittag</label>
+            <label class="radio"><input type="checkbox" name="tageszeit" value="Nachmittag"> Nachmittag</label>
+            <label class="radio"><input type="checkbox" name="tageszeit" value="Flexibel"> Flexibel</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend>Bevorzugte Wochentage <span style="font-weight: 400; color: var(--ink-500); font-size: 0.9em;">· Mittwoch ist geschlossen</span></legend>
+          <div class="radio-row">
+            <label class="radio"><input type="checkbox" name="wochentag" value="Montag"> Mo</label>
+            <label class="radio"><input type="checkbox" name="wochentag" value="Dienstag"> Di</label>
+            <label class="radio"><input type="checkbox" name="wochentag" value="Donnerstag"> Do</label>
+            <label class="radio"><input type="checkbox" name="wochentag" value="Freitag"> Fr</label>
+            <label class="radio"><input type="checkbox" name="wochentag" value="Samstag"> Sa (vormittags)</label>
+          </div>
+        </fieldset>
+
+        <label>Dringlichkeit
+          <select name="dringlichkeit">
+            <option>Flexibel</option>
+            <option>In den nächsten 2 Wochen</option>
+            <option>Diese Woche wenn möglich</option>
+          </select>
+        </label>
+
+        <h3 class="form-group-title">4 · Ihr Anliegen</h3>
+        <label>Kurze Beschreibung
+          <textarea name="message" rows="5" placeholder="Beschwerden, Diagnose, Materialwunsch, besondere Anforderungen …"></textarea>
+        </label>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn-dark">Terminanfrage absenden <span class="arrow">→</span></button>
+          <p class="form-legal">Mit dem Absenden stimmen Sie unserer <a href="../../datenschutz.html">Datenschutzerklärung</a> zu. Wir melden uns innerhalb eines Werktags.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../../index.html" class="brand" aria-label="OA Adelmann"><img src="../../OA_OKay.svg" alt="OA Adelmann" class="brand-logo"/></a>
+          <p>Orthopädie-Schuhtechnik aus Leidenschaft. In sechster Generation im Herzen von Neuss.</p>
+        </div>
+        <div><h5>Seiten</h5><ul>
+          <li><a href="../../index.html">Start</a></li>
+          <li><a href="../../ueber-uns.html">Über uns</a></li>
+          <li><a href="../">Unsere Leistungen</a></li>
+          <li><a href="../../kontakt.html">Kontakt</a></li>
+        </ul></div>
+        <div><h5>Kontakt</h5><ul>
+          <li>Krämerstr. 15<br/>41460 Neuss</li>
+          <li>Tel. 02131 272627</li>
+          <li>Fax 02131 272628</li>
+          <li><a href="mailto:kontakt@oadelmann.de">kontakt@oadelmann.de</a></li>
+        </ul></div>
+        <div><h5>Öffnungszeiten</h5><ul>
+          <li>Mo, Di, Do, Fr: 8:00–18:00</li>
+          <li>Mi: geschlossen</li>
+          <li>Sa: 9:00–12:30</li>
+          <li>So: geschlossen</li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="year">2026</span> Orthopädie-Schuhtechnik Adelmann</div>
+        <div><a href="../../impressum.html">Impressum</a> · <a href="../../datenschutz.html">Datenschutz</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="../../script.js"></script>
+</body>
+</html>
