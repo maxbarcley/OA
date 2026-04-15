@@ -869,41 +869,104 @@ p  { margin: 0 0 1em; }
   color: var(--ink-600);
 }
 
-.success-banner-wrap {
-  padding-top: 32px;
-  padding-bottom: 0;
+.success-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 48px;
+  align-items: center;
 }
-.success-banner {
+.success-portrait {
   margin: 0;
-  border-radius: var(--r-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-card);
-  aspect-ratio: 16 / 6;
-  background: var(--cream-100);
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
 }
-.success-banner img {
+.success-portrait img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center 22%;
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-card);
   display: block;
+}
+.success-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  border-radius: var(--r-xl);
+  background: var(--green-800);
+  opacity: 0.1;
+  z-index: -1;
+}
+.success-portrait figcaption {
+  margin-top: 16px;
+  font-size: 0.88rem;
+  color: var(--ink-600);
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 320px;
+}
+.success-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+  counter-reset: success-step;
+}
+.success-steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 22px 24px;
+  transition: border-color .2s, transform .2s;
+}
+.success-steps li:hover {
+  border-color: var(--green-500);
+  transform: translateY(-1px);
+}
+.success-steps .num {
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem;
+  color: var(--green-800);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  padding-top: 4px;
+  min-width: 38px;
+}
+.success-steps h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 6px;
+  color: var(--ink-900);
+}
+.success-steps p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ink-600);
 }
 
 @media (max-width: 900px) {
   .success-card { padding: 56px 28px 48px; }
-  .success-next { grid-template-columns: 1fr; }
-  .success-banner {
-    aspect-ratio: 4 / 5;
-    max-width: 420px;
+  .success-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  .success-banner img { object-position: center 22%; }
-}
-
-@media (max-width: 560px) {
-  .success-banner { aspect-ratio: 3 / 4; max-width: 360px; }
+  .success-portrait {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .success-portrait figcaption {
+    text-align: center;
+    max-width: none;
+  }
+  .success-portrait::before { inset: 14px -14px -14px 14px; }
 }
 
 /* ---------- Termin form (Maßschuh) ---------- */
