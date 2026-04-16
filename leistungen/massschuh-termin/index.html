@@ -206,5 +206,49 @@
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="../../script.js"></script>
+
+  <!-- Dashboard-Bridge: schickt eine Kopie der Anfrage parallel ans interne OA-Dashboard.
+       Web3Forms bleibt Hauptweg (E-Mail-Benachrichtigung + Redirect auf danke.html).
+       Fällt der Dashboard-Endpoint aus, geht die Anfrage trotzdem nicht verloren. -->
+  <script>
+    (function () {
+      var form = document.querySelector('form.termin-form');
+      if (!form) return;
+      var ENDPOINT = 'https://oa-dashboard-red.vercel.app/api/orders/intake';
+      form.addEventListener('submit', function () {
+        try {
+          var fd = new FormData(form);
+          // Honeypot abgreifen — wenn Bot, nicht spiegeln.
+          if (fd.get('botcheck')) return;
+
+          // FormData → JSON, mit Array-Handling für Mehrfach-Checkboxen.
+          var data = {};
+          fd.forEach(function (value, key) {
+            if (key === 'access_key' || key === 'subject' || key === 'from_name' || key === 'redirect' || key === 'botcheck') return;
+            if (data[key] === undefined) {
+              data[key] = value;
+            } else if (Array.isArray(data[key])) {
+              data[key].push(value);
+            } else {
+              data[key] = [data[key], value];
+            }
+          });
+
+          // keepalive, damit der Request die Form-Submission / Navigation überlebt.
+          fetch(ENDPOINT, {
+            method: 'POST',
+            mode: 'cors',
+            keepalive: true,
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(data),
+          }).catch(function () {
+            /* silent — Web3Forms fängt es auf */
+          });
+        } catch (e) {
+          /* silent */
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
