@@ -473,6 +473,9 @@ p  { margin: 0 0 1em; }
   padding-bottom: 0;
   justify-content: center;
 }
+@media (max-width: 720px) {
+  .jump-tiles { padding-top: 2.5rem; }
+}
 .jump-tile {
   display: inline-block;
   padding: 8px 18px;
