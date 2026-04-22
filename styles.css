@@ -474,7 +474,7 @@ p  { margin: 0 0 1em; }
   justify-content: center;
 }
 @media (max-width: 720px) {
-  .jump-tiles { padding-top: 2.5rem; }
+  .jump-tiles { padding-top: 4rem; }
 }
 .jump-tile {
   display: inline-block;
