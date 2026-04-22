@@ -473,9 +473,6 @@ p  { margin: 0 0 1em; }
   padding-bottom: 0;
   justify-content: center;
 }
-@media (max-width: 720px) {
-  .jump-tiles { padding-top: 4rem; }
-}
 .jump-tile {
   display: inline-block;
   padding: 8px 18px;
@@ -1454,6 +1451,7 @@ html.js .reveal:not(.is-in) { opacity: 0; transform: translateY(20px); }
   .reviews-grid { grid-template-columns: 1fr; }
   .faq-q { padding: 18px 20px; font-size: 1rem; }
   .faq-a { padding: 0 20px 18px; }
+  .jump-tiles { padding-top: 4rem; }
 }
 
 /* Very small phones */
