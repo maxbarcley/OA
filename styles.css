@@ -463,6 +463,34 @@ p  { margin: 0 0 1em; }
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
+
+/* ---------- Jump tiles (Leistungen quick-nav) ---------- */
+.jump-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+  justify-content: center;
+}
+.jump-tile {
+  display: inline-block;
+  padding: 8px 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink-700);
+  transition: background .2s, color .2s, border-color .2s;
+  white-space: nowrap;
+}
+.jump-tile:hover {
+  background: var(--green-800);
+  color: var(--white);
+  border-color: var(--green-800);
+}
+
 .split-head {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
